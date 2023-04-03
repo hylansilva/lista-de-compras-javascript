@@ -9,12 +9,29 @@
     <script src="./src/app.js" defer></script>
 </head>
 <body>
-    <h2> Escreva un item no imput a baixo</h2>
-    <input type="text" placeholder="Ex: Manga" name="item" id="itemInput"/>
-    <button id="addItem">Adicionar Item</button>
-    <button id="clearList">Limpar</button>
-    <ul id="list">
-        
-    </ul>
+    <h2> Escreva um item no imput a baixo</h2>
+    <p>
+        Produto: <input type="text" placeholder="Ex: Manga" name="item" id="itemInput"/>
+        Quantidade: <input type="text" name="amount" id="amountInput">
+        Valor: <input type="text" name="price" id="priceInput">
+        <button id="addItem">Adicionar Item</button>
+        <button id="clearList">Limpar</button>
+    </p>
+    <table>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+        </tr>
+        <tr id="productColumn">
+            
+        </tr>
+        <tr id="amountColumn">
+
+        </tr>
+        <tr id="priceColumn">
+
+        </tr>
+    </table>        
 </body>
 </html>

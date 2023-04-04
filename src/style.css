@@ -1,8 +1,40 @@
-table{
-    width:100%;
+h1{
+    font-size: 3rem !important;
 }
 
-/* td{
-    text-align: center;
-    font-size: xx-large;
-} */
+.bg-white{
+    background-color: white !important;
+}
+
+.my-left-rounded-circle{
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+    background-color: white;
+}
+
+.my-rigth-rounded-circle{
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+}
+
+
+@media only screen and (max-width: 600px){
+    footer{
+        position:absolute !important;
+        bottom: 30px !important;
+    } 
+}
+
+footer a{
+    color: white;
+    font-weight: bolder !important;
+    border-radius: 35px !important;
+    padding: 5px 10px !important;
+    background-color: blueviolet !important;
+    text-decoration: none !important;
+}
+
+.flo{
+    bottom: 80px;
+    right: 40vw;
+}

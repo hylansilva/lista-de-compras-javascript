@@ -7,31 +7,34 @@ const amountInput = document.getElementById("amountInput");
 const priceInput = document.getElementById("priceInput");
 const addItem = document.getElementById("addItem");
 const clearList = document.getElementById("clearList");
-const table = document.getElementById("table");
+const tbody = document.getElementById("tbody");
 
+const listItem = document.createElement("td");
+const listAmount = document.createElement("td");
+const listPrice = document.createElement("td");
 // Função que escreve o item na lista
-const createListItem = () =>{
+const createListItem = (products) =>{
+    tbody.innerHTML = "";
     // laço que percorre a quantidade de produtos dentro do array
     for(let i = 0; i < products.length; i++){
-
-        const item = document.createTextNode(products[i].name);
-        const amount = document.createTextNode(products[i].amont);
-        const value = document.createTextNode(products[i].price);
-
-        const tr = document.createElement("tr");
-
-        const listItem = document.createElement("td");
-        const listAmount = document.createElement("td");
-        const listPrice = document.createElement("td");
-
-        listItem.appendChild(item);
-        listAmount.appendChild(amount);
-        listPrice.appendChild(value);
-
-        tr.appendChild(listItem,listAmount,listPrice)
-
-        table.appendChild(tr)
-    }
+        // criando as linhas da tabela
+            const item = document.createTextNode(products[i].name);
+            const amount = document.createTextNode(products[i].amont);
+            const value = document.createTextNode(products[i].price);
+        
+            // Criando a coluna da tabela
+            const tr = document.createElement("tr");
+            // atribuindo o valor de cada item a linha da tabela
+            listItem.appendChild(item);
+            listAmount.appendChild(amount);
+            listPrice.appendChild(value);
+            // atribuindo esses valores a uma nova coluna
+            tr.appendChild(listItem)
+            tr.appendChild(listAmount)
+            tr.appendChild(listPrice)
+            // 
+            tbody.appendChild(tr) 
+        }
 };
 
 
@@ -53,15 +56,20 @@ const hndBtnAddItem = () =>{
     amountInput.value = "";
     priceInput.value = "";
 
-    createListItem();
+    createListItem(products);
+    itemImput.focus()
 };
 
 
 // Função de Apagar todos os itens da lista
 const hndBtnClearList = () =>{
     itemImput.value = "";
+    amountInput.value = "";
+    priceInput.value = "";
     products = [];
-    productColumn.innerHTML ="";
+    listItem.innerHTML = ""
+    listAmount.innerHTML = ""
+    listPrice.innerHTML = ""
     itemImput.focus();
 };
 

@@ -12,18 +12,14 @@
     <h2> Escreva um item no imput a baixo</h2>
     <p>
         Produto: <input type="text" placeholder="Ex: Manga" name="item" id="itemInput"/>
-        Quantidade: <input type="text" name="amount" id="amountInput">
-        Valor: <input type="text" name="price" id="priceInput">
+        Quantidade: <input type="number" placeholder="2" name="amount" id="amountInput">
+        Valor: <input type="number" name="price" placeholder="2" id="priceInput">
         <button id="addItem">Adicionar Item</button>
         <button id="clearList">Limpar</button>
     </p>
-    <table id="table" style="width:100%">
-        <tr>
-            <tH>PRODUTO</tH>
-            <tH>QUANTIDADE</tH>
-            <tH>VALOR</tH>
-        </tr>
-        
+    <table id="table" >
+        <tbody id="tbody">
+        </tbody>
     </table>        
 </body>
 </html>
